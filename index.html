@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AAPC Login</title>
+  <style>
+  /* Default - Desktop */
+  body {
+    font-size: 18px;
+    padding: 40px;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .container {
+      width: 100%;
+    }
+  }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 360px;
+      position: relative;
+    }
+
+    .login-box .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .login-box .logo img {
+      height: 40px;
+    }
+
+    .login-box .cancel {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      color: #444;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background: none;
+      border: none;
+      font-size: 12px;
+      cursor: pointer;
+      color: #0066ff;
+    }
+
+    .login-box button.signin {
+      background: #0066ff;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-box .links {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .login-box .links a {
+      color: #0066ff;
+      text-decoration: none;
+    }
+
+    .or-divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+      color: #999;
+    }
+
+    .or-divider::before,
+    .or-divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .or-divider:not(:empty)::before {
+      margin-right: .75em;
+    }
+
+    .or-divider:not(:empty)::after {
+      margin-left: .75em;
+    }
+
+    .login-box button.create {
+      background: none;
+      border: 1px solid #0066ff;
+      color: #0066ff;
+      padding: 12px;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 400px) {
+      .login-box {
+        padding: 20px;
+      }
+    }
+    .create-btn-link {
+  display: inline-block;
+  text-align: center;
+  background: none;
+  border: 1px solid #0066ff;
+  color: #0066ff;
+  padding: 12px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+  </style>
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById('passwordInput');
+      const toggleBtn = document.querySelector('.password-wrapper button');
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleBtn.textContent = "HIDE";
+      } else {
+        passwordInput.type = "password";
+        toggleBtn.textContent = "SHOW";
+      }
+    }
+
+    function goToDashboard() {
+      const username = document.getElementById("usernameInput").value;
+      const password = document.getElementById("passwordInput").value;
+
+      if (username === "shadilsha2017@gmail.com" && password === "pczyoz7d") {
+       window.location.href = "aapc.com.html";
+      } else {
+        alert("Incorrect username or password!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <a href="index.html" class="cancel">&lt; Cancel</a>
+      <div class="logo">
+        <img src="LOGIN LOGO.svg" alt="AAPC Logo">
+      </div>
+      <input type="text" id="usernameInput" placeholder="Username" />
+
+      <div class="password-wrapper">
+        <input type="password" placeholder="Password" id="passwordInput" />
+        <button type="button" onclick="togglePassword()">SHOW</button>
+      </div>
+
+      <button class="signin" onclick="goToDashboard()">SIGN IN TO ACCESS</button>
+
+      <div class="links">
+        <p><a href="forgot-password.html">Forgot password?</a></p>
+      </div>
+
+      <div class="or-divider">Or</div>
+
+     <a href="create-account.html" class="create-btn-link">CREATE AN ACCOUNT</a>
+    </div>
+  </div>
+</body>
+
+</html>

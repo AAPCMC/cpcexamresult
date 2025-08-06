@@ -1,0 +1,368 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAPC Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+  /* Default - Desktop */
+  body {
+    font-size: 18px;
+    padding: 40px;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .container {
+      width: 100%;
+    }
+  }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    /* HEADER */
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  header img {
+    height: 38px;
+  }
+  nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #003b4d;
+    font-weight: 500;
+  }
+    .user-controls {
+    font-size: 13px;
+  }
+  .user-controls a {
+    text-decoration: none;
+    color: #003b4d;
+    margin: 0 4px;
+  }
+
+    /* LAYOUT */
+    .container {
+      display: flex;
+    }
+
+    aside {
+      width: 220px;
+      border-right: 1px solid #ddd;
+      background-color: #f5f5f5;
+      padding: 10px 0;
+    }
+
+    aside h2 {
+      background-color: #669e93;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      margin: 0;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    aside li {
+      padding: 10px 15px;
+      border-top: 1px solid #ddd;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    aside li.active {
+      color: #f36f21;
+      font-weight: bold;
+      border-left: 4px solid #f36f21;
+      background-color: #eee;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .breadcrumb {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .page-title {
+      font-size: 22px;
+      color: #003333;
+      margin-bottom: 20px;
+    }
+
+    .top-cards {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card, .ceu-box {
+      border: 1px solid #ddd;
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .score-circle {
+      border: 4px solid #f36f21;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .ceu-box button {
+      background-color: #f36f21;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #444;
+      color: white;
+      text-align: left;
+      padding: 8px;
+    }
+
+    td {
+      padding: 8px;
+      border-top: 1px solid #ddd;
+    }
+    .ceu-instructions {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+.ceu-instructions ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+.ceu-instructions ul li {
+  margin-bottom: 4px;
+}
+.ceu-instructions a {
+  color: #004848;
+  text-decoration: underline;
+}
+
+    /* FOOTER */
+     footer {
+      background: #004848;
+      color: white;
+      padding: 32px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+    }
+     .footer-logo img { height: 36px; margin-bottom: 12px; }
+    .footer-links { margin: 12px 0; text-align: center; }
+    .footer-links a { color: white; text-decoration: none; margin: 0 8px; }
+    .social-icons img { width: 22px; margin: 0 6px; }
+    .store-buttons img { height: 40px; margin: 12px 8px; }
+
+    /* HELP BUTTON */
+    .help-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #00796b;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: none;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<header>
+
+ <img src="LOGIN LOGO.svg" alt="AAPC Logo">
+  <nav>
+    <ul>
+      <li><a href="#">Certifications</a></li>
+      <li><a href="#">Training and Events</a></li>
+      <li><a href="#">Resources</a></li>
+      <li><a href="#">Software and Services</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Membership</a></li>
+    </ul>
+  </nav>
+  <div class="user-controls">
+    <a href="#">What's New</a> |
+    <a href="#">About Us</a> |
+    <a href="#">Support</a> |
+    <a href="#">Cart</a> |
+    <a href="#">Shadil P M</a>
+  </div>
+  </header>
+
+  <div class="container">
+    <aside>
+      <h2>My Account</h2>
+      <ul>
+        <li>Overview</li>
+        <li class="active">Purchases</li>
+        <li>Subscriptions</li>
+        <li>Courses and Exams</li>
+        <li>Certifications and CEUs</li>
+        <li>Profile/Preferences</li>
+        <li>Membership</li>
+        <li>Benefits</li>
+        <li>Local Chapter</li>
+        <li>Apprentice</li>
+      </ul>
+    </aside>
+
+    <main>
+      <div class="breadcrumb">Home &gt; My Purchases/Items &gt; Exam Results</div>
+
+      <div class="page-title">I passed my exam – now what?</div>
+
+      <div class="top-cards">
+        <div class="card">
+          <div>
+            <div>Your Exam</div>
+            <div>Score: 73%</div>
+          </div>
+          <div class="score-circle">73%</div>
+        </div>
+        <div class="ceu-box">
+          <div>Know Your CEU Requirements</div>
+          <button>LEARN MORE</button>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Areas of Study</th><th>Score</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>10000 Series</td><td>100%</td></tr>
+          <tr><td>20000 Series</td><td>50%</td></tr>
+          <tr><td>30000 Series</td><td>67%</td></tr>
+          <tr><td>40000 Series</td><td>100%</td></tr>
+          <tr><td>50000 Series</td><td>83%</td></tr>
+          <tr><td>60000 Series</td><td>83%</td></tr>
+          <tr><td>Anatomy</td><td>75%</td></tr>
+          <tr><td>Anesthesia</td><td>100%</td></tr>
+          <tr><td>Cases</td><td>70%</td></tr>
+          <tr><td>Coding Guidelines</td><td>57%</td></tr>
+          <tr><td>Compliance & Regulatory</td><td>100%</td></tr>
+          <tr><td>E/M</td><td>83%</td></tr>
+          <tr><td>HCPCS</td><td>100%</td></tr>
+          <tr><td>ICD-10-CM</td><td>40%</td></tr>
+          <tr><td>Lab and Path</td><td>50%</td></tr>
+          <tr><td>Med Term</td><td>25%</td></tr>
+          <tr><td>Medicine</td><td>67%</td></tr>
+          <tr><td>Radiology</td><td>83%</td></tr>
+          <tr><td>Total</td><td>73%</td></tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+<div class="ceu-instructions">
+  <p>
+    Congratulations – You are now a certified member of AAPC! You join an elite group of coders who have distinguished themselves by passing the rigorous certification exam. To maintain your certification you will need to earn continuing education credits. The number of CEUs required for your first submission have been pro-rated to match your membership date. You’ll have <strong>16.50 CEUs due by 11/30/2025.</strong>
+  </p>
+  <p>
+    After your first CEU submission, CEUs are reported every two years on or before your membership due date. You must pay your membership dues every year, even on a year when you are not required to report CEUs. The year that your CEUs are due is based on the month of your membership. If your renewal is due on an odd month, CEUs are submitted on an odd year. The same rule applies for even renewal months.
+  </p>
+  <p>
+    You can obtain your CEUs through a variety of methods:
+  </p>
+  <ul>
+    <li><a href="#">AAPC Conferences</a></li>
+    <li><a href="#">Medical Coding Workshops</a></li>
+    <li><a href="#">Webinars</a></li>
+    <li><a href="#">Local Chapters</a></li>
+  </ul>
+</div>
+  <button class="help-button">❓ HELP</button>
+  <footer>
+  <div class="footer-logo">
+    <img src="footer-logo-new.svg" alt="AAPC Logo" />
+  </div>
+  <div class="footer-links">
+    &copy; 2025 AAPC |
+    <a href="#">About</a> |
+    <a href="#">AAPC Codify</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms & Conditions</a> |
+    <a href="#">Careers</a> |
+    <a href="#">Advertise with Us</a> |
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="social-icons">
+    <img src="youtube-icon-white.svg" alt="YouTube">
+    <img src="instagrame-icon-white.svg" alt="Instagram">
+    <img src="icon-facebook-white.svg" alt="Facebook">
+    <img src="icon-twitter-white.svg" alt="Twitter">
+    <img src="icon-linkedin-white.svg" alt="LinkedIn">
+  </div>
+  <div class="store-buttons">
+    <img src="icon-google-play.svg" alt="App Store">
+    <img src="icon-app-store.svg" alt="Google Play">
+  </div>
+</footer>
+
+</body>
+</html>
+
+</body>
+</html>

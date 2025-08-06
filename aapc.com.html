@@ -1,0 +1,525 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses and Exams | AAPC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <style>
+  /* Default - Desktop */
+  body {
+    font-size: 18px;
+    padding: 40px;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .container {
+      width: 100%;
+    }
+  }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: white;
+      font-size: 12px;
+      padding: 8px 32px 4px;
+      color: #004848;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    .top-bar a {
+      color: #004848;
+      text-decoration: none;
+    }
+
+    .top-bar span {
+      color: #999;
+    }
+
+    .main-header {
+      padding: 8px 32px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .main-header img {
+      height: 40px;
+    }
+
+    .main-header nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+    }
+
+    .main-header nav a {
+      color: #004848;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      white-space: nowrap;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      z-index: 1000;
+      display: none;
+      gap: 40px;
+    }
+
+    .dropdown-column {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 220px;
+    }
+
+    .dropdown-column h4 {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #004848;
+      font-weight: bold;
+    }
+
+    .dropdown-column a {
+      color: #004848;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .nav-item.active .dropdown {
+      display: flex;
+    }
+
+    .container { display: flex; padding: 30px 40px; }
+    .sidebar { width: 260px; border-radius: 8px; overflow: hidden; }
+    .sidebar .title { background: #69a99f; color: #fff; font-weight: bold; text-align: center; padding: 12px; }
+    .sidebar ul { list-style: none; border: 1px solid #e0e0e0; }
+    .sidebar li { padding: 12px 16px; background: #f8f8f8; border-top: 1px solid #eee; font-weight: 600; }
+    .sidebar li.active { background: #fff; border-left: 4px solid #e26438; color: #e26438; }
+    .profile-box {
+      background: #eef5f3;
+      padding: 16px;
+      border-radius: 6px;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+    .profile-title {
+      background-color: #69a99f;
+      color: white;
+      padding: 10px;
+      font-weight: 600;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    .progress-bar {
+      background: #ccc;
+      height: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+    .progress {
+      width: 62%;
+      height: 100%;
+      background: #1a8871;
+    }
+    .main { flex: 1; padding-left: 40px; }
+    .breadcrumbs { color: #378e7c; font-size: 14px; margin-bottom: 16px; }
+    .breadcrumbs a { color: #378e7c; text-decoration: none; }
+    h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 28px;
+      margin-bottom: 6px;
+      color: #002e2e;
+    }
+    .description { color: #444; font-size: 14px; margin-bottom: 20px; }
+    .section { margin-bottom: 30px; }
+    .section-header { display: flex; justify-content: space-between; align-items: center; font-weight: 600; }
+    .section-header span { font-size: 18px; }
+    .section-header a { font-size: 14px; color: #0c5959; text-decoration: none; }
+    .box { margin-top: 12px; padding: 16px; border: 1px solid #e6e6e6; border-radius: 6px; font-size: 14px; color: #555; }
+    .box a { color: #0c5959; text-decoration: underline; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; border: 1px solid #e0e0e0; border-radius: 6px; overflow: hidden; }
+    th, td { text-align: left; padding: 12px 16px; font-size: 14px; }
+    th { background: #f5f5f5; font-weight: 600; }
+    tr:nth-child(odd) { background: #fcfcfc; }
+    tr:nth-child(even) { background: #f9f9f9; }
+    td a { color: #0c5959; text-decoration: underline; }
+
+    footer {
+      background: #004848;
+      color: white;
+      padding: 32px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+    }
+    .footer-logo img { height: 36px; margin-bottom: 12px; }
+    .footer-links { margin: 12px 0; text-align: center; }
+    .footer-links a { color: white; text-decoration: none; margin: 0 8px; }
+    .social-icons img { width: 22px; margin: 0 6px; }
+    .store-buttons img { height: 40px; margin: 12px 8px; }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.nav-item > a').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle('active');
+          document.querySelectorAll('.nav-item').forEach(function(item) {
+            if (item !== parent) item.classList.remove('active');
+          });
+        });
+      });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-item')) {
+          document.querySelectorAll('.nav-item').forEach(function(item) {
+            item.classList.remove('active');
+          });
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+    <a href="What's New.html">What's New</a><span>|</span>
+    <a href="B.html">About Us</a><span>|</span>
+    <a href="C.html">Support</a><span>|</span>
+    <a href="D.html">Cart</a><span>|</span>
+    <a href="E.html">My AAPC</a><span>|</span>
+    <a href="F.html">Shadil P M</a><span></span>
+  </div>
+  <div class="main-header">
+    <img src="LOGIN LOGO.svg" alt="AAPC Logo">
+    <nav>
+      <div class="nav-item">
+        <a href="#">Certifications</a>
+        <div class="dropdown">
+          <div class="dropdown-column">
+            <h4>Certification Types</h4>
+            <a href="Medical coding.html">Medical Coding</a>
+            <a href="#.html">Medical Billing</a>
+            <a href="#.html">Medical Auditing</a>
+            <a href="#.html">Compliance</a>
+            <a href="#.html">Practice Management</a>
+            <a href="#.html">Specialty Medical Coding</a>
+          </div>
+          <div class="dropdown-column">
+            <h4>Other</h4>
+            <a href="#">Certification Exam Information</a>
+            <a href="#">Take a Practice Exam</a>
+            <a href="#">Training & Exam Bundles</a>
+            <a href="#">Corporate Training</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Training and Events</a>
+        <div class="dropdown">
+          <div class="dropdown-column">
+            <h4>Training</h4>
+            <a href="#">Training Overview</a>
+            <a href="#">Prerequisites</a>
+            <a href="#">Exam Preparation</a>
+            <a href="#">CPC (Medical Coding)</a>
+            <a href="#">CPB (Medical Billing)</a>
+            <a href="#">CPC + CPB</a>
+            <a href="#">All Certification Courses</a>
+            <a href="#">Continuing Education</a>
+            <a href="#">Search for CEUs</a>
+            <a href="#">Webinars</a>
+            <a href="#">Workshops</a>
+            <a href="#">Specialty Certificates</a>
+            <a href="#">Revenue Cycle Insider</a>
+          </div>
+          <div class="dropdown-column">
+            <h4>Events</h4>
+            <a href="#">Events Overview</a>
+            <a href="#">HEALTHCON</a>
+            <a href="#">HEALTHCON Regional</a>
+            <a href="#">RISKCON</a>
+            <a href="#">DOCUCON</a>
+            <a href="#">AUDITCON</a>
+            <a href="#">REVCON</a>
+            <a href="#">Local Chapter Events</a>
+          </div>
+          <div class="dropdown-column">
+            <h4>Education Solutions</h4>
+            <a href="#">Overview</a>
+            <a href="#">Curriculum Licensing</a>
+            <a href="#">Educational Resources</a>
+            <a href="#">Career-Readiness Software</a>
+            <a href="#">Instructor Certification</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+  <a href="#">Resources</a>
+  <div class="dropdown">
+    <div class="dropdown-column">
+      <h4>Articles & Publications</h4>
+      <a href="#">Healthcare Business Monthly</a>
+      <a href="#">Knowledge Center</a>
+      <a href="#">Medical Coding News</a>
+      <a href="#">Billing Insights</a>
+    </div>
+    <div class="dropdown-column">
+      <h4>Tools</h4>
+      <a href="#">Code Lookup</a>
+      <a href="#">Crosswalks</a>
+      <a href="#">Fee Schedules</a>
+      <a href="#">Guidelines</a>
+    </div>
+    <div class="dropdown-column">
+      <h4>Additional Resources</h4>
+      <a href="#">Compliance Resources</a>
+      <a href="#">Templates & Forms</a>
+      <a href="#">Webinars & Recordings</a>
+      <a href="#">White Papers</a>
+    </div>
+  </div>
+</div>
+      <div class="nav-item">
+  <a href="#">Software and Services</a>
+  <div class="dropdown" style="min-width:600px;">
+    <div class="dropdown-column">
+      <a href="#">Codify</a>
+      <a href="#">Practicode</a>
+      <a href="#">Xtern Program</a>
+      <a href="#">Calculators and Tools</a>
+    </div>
+    <div class="dropdown-column" style="background:#f5f5f5; padding:12px; border-radius:6px;">
+      <h4 style="font-size:14px; margin-bottom:8px; color:#004848;">Business Solutions</h4>
+      <a href="#">Overview</a>
+      <a href="#">Audit Services</a>
+      <a href="#">Coding Services</a>
+      <a href="#">Codify by AAPC for Teams</a>
+      <a href="#">Practicode for Employers and Educators</a>
+      <a href="#">Data Files</a>
+      <a href="#">Corporate Membership</a>
+      <a href="#">Find Custom Team Training</a>
+    </div>
+  </div>
+</div>
+      <div class="nav-item">
+  <a href="#">Shop</a>
+  <div class="dropdown" style="min-width:700px;">
+    <div class="dropdown-column">
+      <a href="#"><strong>Shop Overview</strong></a>
+      <a href="#"><strong>Books and Guides</strong></a>
+      <a href="#">Book and Guide Bundles</a>
+      <a href="#">ICD-10 Code Books</a>
+      <a href="#">CPT Books</a>
+      <a href="#">HCPCS</a>
+      <a href="#">Coders' Specialty Guides</a>
+      <a href="#">Reference Guides</a>
+      <a href="#">Partner Publications</a>
+      <a href="#">Code Updates</a>
+    </div>
+    <div class="dropdown-column">
+      <a href="#"><strong>Exam Prep</strong></a>
+      <a href="#">Prerequisite Courses</a>
+      <a href="#">Exam Preparation Courses</a>
+      <a href="#">Study Guides</a>
+      <a href="#">Practice Exams</a>
+      <a href="#">Exam Review</a>
+      <a href="#"><strong>Continuing Education</strong></a>
+      <a href="#">Webinars</a>
+      <a href="#">Workshops</a>
+      <a href="#">Specialty Certificate Courses</a>
+      <a href="#">Revenue Cycle Insider</a>
+      <a href="#"><strong>Instructor Resources</strong></a>
+      <a href="#"><strong>AAPC Merchandise</strong></a>
+    </div>
+    <div class="dropdown-column" style="background:#f5f5f5; padding:12px; border-radius:6px;">
+      <h4 style="font-size:14px; margin-bottom:8px; color:#004848;">Business Solutions</h4>
+      <a href="#">Group Purchasing</a>
+      <a href="#">Group Webinars and Workshops</a>
+      <a href="#">Publisher Request Form</a>
+    </div>
+  </div>
+</div>
+
+      <div class="nav-item">
+  <a href="#">Membership</a>
+  <div class="dropdown" style="min-width:400px;">
+    <div class="dropdown-column">
+      <a href="#">Membership Overview</a>
+      <a href="#">Local Chapters</a>
+      <a href="#">Savings Center</a>
+      <a href="#">Learning Library</a>
+    </div>
+    <div class="dropdown-column" style="background:#f5f5f5; padding:12px; border-radius:6px;">
+      <h4 style="font-size:14px; margin-bottom:8px; color:#004848;">Business Solutions</h4>
+      <a href="#">Corporate Membership</a>
+    </div>
+  </div>
+</div>
+      <a href="#"><img src="searchicon.svg" alt="Search" style="width:18px; vertical-align:middle;"></a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="sidebar">
+    <div class="title">My Account</div>
+    <ul>
+      <li>Overview</li>
+      <li>Purchases</li>
+      <li>Subscriptions</li>
+      <li class="active">Courses and Exams</li>
+      <li>Certifications and CEUs</li>
+      <li>Profile/Preferences</li>
+      <li>Membership</li>
+      <li>Benefits</li>
+      <li>Local Chapter</li>
+      <li>Apprentice</li>
+    </ul>
+    <div class="profile-box">
+      <div class="profile-title">Your Profile</div>
+      <div class="progress-bar"><div class="progress"></div></div>
+      <p>Your Profile is 62% Complete<br><a href="#" style="color:#1a8871; font-weight:600;">Update Profile</a></p>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="breadcrumbs">
+      <a href="#">Home</a> > <a href="#">My Account</a> > Courses and Exams
+    </div>
+
+    <h1>Courses and Exams</h1>
+    <p class="description">Find all your course/exam data here including grades. Get access to your course materials.</p>
+
+    <div class="section">
+      <div class="section-header">
+        <span>AAPC Courses</span>
+        <a href="#">FIND AAPC TRAINING COURSES &#8250;</a>
+      </div>
+      <div class="box">No Results. <a href="#">Find AAPC Training Courses.</a></div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span>Partner Courses</span>
+        <a href="#">FIND PARTNER TRAINING COURSES &#8250;</a>
+      </div>
+      <div class="box">No Results. <a href="#">Find Partner Training Courses.</a></div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span>Exams</span>
+        <a href="#">SCHEDULE AN EXAM &#8250;</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Exam</th>
+            <th>Title</th>
+            <th>Exam Date/Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CPC</td>
+            <td><a href="E1.html">Electronic Exam - Calicut, Kerala</a></td>
+            <td>Aug 06, 2025 02:00 PM</td>
+            <td class="status pass">PASS</td>
+          </tr>
+          <tr>
+            <td>CPC</td>
+            <td><a href="E2.html">Electronic Exam - Calicut, Kerala</a></td>
+            <td>Mar 01, 2025 02:00 PM</td>
+            <td class="status fail">FAIL</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span>Practice Exams</span>
+        <a href="#">GET PRACTICE EXAMS &#8250;</a>
+      </div>
+      <div class="box">No Results. <a href="#">Buy Practice Exams.</a></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <img src="footer-logo-new.svg" alt="AAPC Logo" />
+  </div>
+  <div class="footer-links">
+    &copy; 2025 AAPC |
+    <a href="#">About</a> |
+    <a href="#">AAPC Codify</a> |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms & Conditions</a> |
+    <a href="#">Careers</a> |
+    <a href="#">Advertise with Us</a> |
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="social-icons">
+    <img src="youtube-icon-white.svg" alt="YouTube">
+    <img src="instagrame-icon-white.svg" alt="Instagram">
+    <img src="icon-facebook-white.svg" alt="Facebook">
+    <img src="icon-twitter-white.svg" alt="Twitter">
+    <img src="icon-linkedin-white.svg" alt="LinkedIn">
+  </div>
+  <div class="store-buttons">
+    <img src="icon-google-play.svg" alt="App Store">
+    <img src="icon-app-store.svg" alt="Google Play">
+  </div>
+</footer>
+
+</body>
+</html>
